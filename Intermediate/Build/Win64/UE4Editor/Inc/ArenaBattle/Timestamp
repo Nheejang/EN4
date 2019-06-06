@@ -1,6 +1,7 @@
 C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\ABAIController.h
 C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\ABAnimInstance.h
 C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\ABCharacter.h
+C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\ABCharacterSelectWidget.h
 C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\ABCharacterStatComponent.h
 C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\ABCharacterWidget.h
 C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\ABGameInstance.h
@@ -9,7 +10,9 @@ C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\ABItemBox.h
 C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\ABPawn.h
 C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\ABPlayerController.h
 C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\ABSection.h
+C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\ABUIPlayerController.h
 C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\ABWeapon.h
+C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\ArenaBattle.h
 C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\BTDecorator_IsInAttackRange.h
 C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\BTService_Detect.h
 C:\Users\IBK\Downloads\UE4CPP\ArenaBattle\Source\ArenaBattle\Public\BTTask_Attack.h

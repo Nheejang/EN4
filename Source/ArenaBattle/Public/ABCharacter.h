@@ -20,6 +20,7 @@ public:
 
 	void SetCharacterState(ECharacterState NewState);
 	ECharacterState GetCharacterState()const;
+	int32 GetExp() const;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

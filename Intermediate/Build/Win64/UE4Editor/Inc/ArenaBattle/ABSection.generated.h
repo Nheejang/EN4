@@ -8,8 +8,8 @@
 #include "ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class UPrimitiveComponent;
 class AActor;
+class UPrimitiveComponent;
 struct FHitResult;
 #ifdef ARENABATTLE_ABSection_generated_h
 #error "ABSection.generated.h already included, missing '#pragma once' in ABSection.h"
@@ -17,6 +17,15 @@ struct FHitResult;
 #define ARENABATTLE_ABSection_generated_h
 
 #define ArenaBattle_Source_ArenaBattle_Public_ABSection_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnKeyNPCDestroyed) \
+	{ \
+		P_GET_OBJECT(AActor,Z_Param_DetroyedActor); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnKeyNPCDestroyed(Z_Param_DetroyedActor); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execOnGateTriggerBeginOverlap) \
 	{ \
@@ -48,6 +57,15 @@ struct FHitResult;
 
 
 #define ArenaBattle_Source_ArenaBattle_Public_ABSection_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnKeyNPCDestroyed) \
+	{ \
+		P_GET_OBJECT(AActor,Z_Param_DetroyedActor); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->OnKeyNPCDestroyed(Z_Param_DetroyedActor); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execOnGateTriggerBeginOverlap) \
 	{ \

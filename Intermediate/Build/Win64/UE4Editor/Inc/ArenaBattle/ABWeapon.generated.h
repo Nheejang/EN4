@@ -59,7 +59,16 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AABWeapon); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AABWeapon)
 
 
-#define ArenaBattle_Source_ArenaBattle_Public_ABWeapon_h_12_PRIVATE_PROPERTY_OFFSET
+#define ArenaBattle_Source_ArenaBattle_Public_ABWeapon_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__AttackRange() { return STRUCT_OFFSET(AABWeapon, AttackRange); } \
+	FORCEINLINE static uint32 __PPO__AttackDamageMin() { return STRUCT_OFFSET(AABWeapon, AttackDamageMin); } \
+	FORCEINLINE static uint32 __PPO__AttackDamageMax() { return STRUCT_OFFSET(AABWeapon, AttackDamageMax); } \
+	FORCEINLINE static uint32 __PPO__AttackModifierMin() { return STRUCT_OFFSET(AABWeapon, AttackModifierMin); } \
+	FORCEINLINE static uint32 __PPO__AttackModifierMax() { return STRUCT_OFFSET(AABWeapon, AttackModifierMax); } \
+	FORCEINLINE static uint32 __PPO__AttackDamage() { return STRUCT_OFFSET(AABWeapon, AttackDamage); } \
+	FORCEINLINE static uint32 __PPO__AttackModifier() { return STRUCT_OFFSET(AABWeapon, AttackModifier); }
+
+
 #define ArenaBattle_Source_ArenaBattle_Public_ABWeapon_h_9_PROLOG
 #define ArenaBattle_Source_ArenaBattle_Public_ABWeapon_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

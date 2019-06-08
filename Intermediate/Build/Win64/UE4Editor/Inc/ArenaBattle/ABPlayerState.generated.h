@@ -62,7 +62,9 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AABPlayerState); \
 #define ArenaBattle_Source_ArenaBattle_Public_ABPlayerState_h_16_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__GameScore() { return STRUCT_OFFSET(AABPlayerState, GameScore); } \
 	FORCEINLINE static uint32 __PPO__CharacterLevel() { return STRUCT_OFFSET(AABPlayerState, CharacterLevel); } \
-	FORCEINLINE static uint32 __PPO__Exp() { return STRUCT_OFFSET(AABPlayerState, Exp); }
+	FORCEINLINE static uint32 __PPO__Exp() { return STRUCT_OFFSET(AABPlayerState, Exp); } \
+	FORCEINLINE static uint32 __PPO__GameHighScore() { return STRUCT_OFFSET(AABPlayerState, GameHighScore); } \
+	FORCEINLINE static uint32 __PPO__CharacterIndex() { return STRUCT_OFFSET(AABPlayerState, CharacterIndex); }
 
 
 #define ArenaBattle_Source_ArenaBattle_Public_ABPlayerState_h_13_PROLOG

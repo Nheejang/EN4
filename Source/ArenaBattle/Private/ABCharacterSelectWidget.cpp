@@ -7,8 +7,8 @@
 #include"Animation/SkeletalMeshActor.h"
 #include"Components/Button.h"
 #include"Components/EditableTextBox.h"
-//#include"ABSaveGame.h"
-//#include"ABPlayerState.h"
+#include"ABSaveGame.h"
+#include"ABPlayerState.h"
 void UABCharacterSelectWidget::NextCharacter(bool bForward)
 {
 	bForward ? CurrentIndex++ : CurrentIndex--;
@@ -52,7 +52,7 @@ void UABCharacterSelectWidget::NativeConstruct()
 	NextButton = Cast<UButton>(GetWidgetFromName(TEXT("btnNext")));
 	ABCHECK(nullptr != NextButton);
 
-	TextBox = Cast<UEditableTextBox>(GetWidgetFromName(TEXT("edtPlaerName")));
+	TextBox = Cast<UEditableTextBox>(GetWidgetFromName(TEXT("edtPlayerName")));
 	ABCHECK(nullptr != TextBox);
 
 	ConfirmButton = Cast<UButton>(GetWidgetFromName(TEXT("btnConfirm")));
@@ -79,21 +79,22 @@ void UABCharacterSelectWidget::OnConfirmClicked()
 	FString CharacterName = TextBox->GetText().ToString();
 	if (CharacterName.Len() <= 0 || CharacterName.Len() > 10)return;
 
-	//UABSaveGame* NewPlayerData = NewObject<UABSaveGame>();
-	//NewPlayerData->PlayerName = CharacterName;
-	//NewPlayerData->Level = 1;
-	//NewPlayerData->Exp = 0;
-	//NewPlayerData->HighScore = 0;
+	UABSaveGame* NewPlayerData = NewObject<UABSaveGame>();
+	NewPlayerData->PlayerName = CharacterName;
+	NewPlayerData->Level = 1;
+	NewPlayerData->Exp = 0;
+	NewPlayerData->HighScore = 0;
+	NewPlayerData->CharacterIndex = CurrentIndex;
 
-	//auto ABPlayerState = GetDefault<AABPlayerState>();
-	//if (UGameplayStatics::SaveGameToSlot(NewPlayerData, ABPlayerState->SaveSlotName, 0))
-	//{
-	//	UGameplayStatics::OpenLevel(GetWorld(), TEXT("Gameplay"));
-	//}
-	//else
-	//{
-	//	ABLOG(Error, TEXT("SaveGame Error!"));
-	//}
+	auto ABPlayerState = GetDefault<AABPlayerState>();
+	if (UGameplayStatics::SaveGameToSlot(NewPlayerData, ABPlayerState->SaveSlotName, 0))
+	{
+		UGameplayStatics::OpenLevel(GetWorld(), TEXT("Gameplay"));
+	}
+	else
+	{
+		ABLOG(Error, TEXT("SaveGame Error!"));
+	}
 
 }
 

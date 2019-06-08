@@ -21,6 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeABSection() {}
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
+	ARENABATTLE_API UFunction* Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed();
 	ARENABATTLE_API UFunction* Z_Construct_UFunction_AABSection_OnTriggerBeginOverlap();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
@@ -30,6 +31,7 @@ void EmptyLinkFunctionForGeneratedCodeABSection() {}
 		UClass* Class = AABSection::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "OnGateTriggerBeginOverlap", &AABSection::execOnGateTriggerBeginOverlap },
+			{ "OnKeyNPCDestroyed", &AABSection::execOnKeyNPCDestroyed },
 			{ "OnTriggerBeginOverlap", &AABSection::execOnTriggerBeginOverlap },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
@@ -84,6 +86,29 @@ void EmptyLinkFunctionForGeneratedCodeABSection() {}
 			};
 #endif
 			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AABSection, "OnGateTriggerBeginOverlap", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00440401, sizeof(ABSection_eventOnGateTriggerBeginOverlap_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed()
+	{
+		struct ABSection_eventOnKeyNPCDestroyed_Parms
+		{
+			AActor* DetroyedActor;
+		};
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_DetroyedActor = { UE4CodeGen_Private::EPropertyClass::Object, "DetroyedActor", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, STRUCT_OFFSET(ABSection_eventOnKeyNPCDestroyed_Parms, DetroyedActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_DetroyedActor,
+			};
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "ModuleRelativePath", "Public/ABSection.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AABSection, "OnKeyNPCDestroyed", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x00040401, sizeof(ABSection_eventOnKeyNPCDestroyed_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
 		}
 		return ReturnFunction;
@@ -157,6 +182,7 @@ void EmptyLinkFunctionForGeneratedCodeABSection() {}
 			};
 			static const FClassFunctionLinkInfo FuncInfo[] = {
 				{ &Z_Construct_UFunction_AABSection_OnGateTriggerBeginOverlap, "OnGateTriggerBeginOverlap" }, // 2286479034
+				{ &Z_Construct_UFunction_AABSection_OnKeyNPCDestroyed, "OnKeyNPCDestroyed" }, // 1277701812
 				{ &Z_Construct_UFunction_AABSection_OnTriggerBeginOverlap, "OnTriggerBeginOverlap" }, // 1534041276
 			};
 #if WITH_METADATA
@@ -257,7 +283,7 @@ void EmptyLinkFunctionForGeneratedCodeABSection() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AABSection, 689931315);
+	IMPLEMENT_CLASS(AABSection, 4185480291);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AABSection(Z_Construct_UClass_AABSection, &AABSection::StaticClass, TEXT("/Script/ArenaBattle"), TEXT("AABSection"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AABSection);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

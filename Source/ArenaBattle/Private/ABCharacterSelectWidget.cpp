@@ -14,7 +14,7 @@ void UABCharacterSelectWidget::NextCharacter(bool bForward)
 	bForward ? CurrentIndex++ : CurrentIndex--;
 
 	if (CurrentIndex == -1) CurrentIndex = MaxIndex - 1;
-	if (CurrentIndex == MaxIndex)CurrentIndex = MaxIndex;
+	if (CurrentIndex == MaxIndex)CurrentIndex = 0;
 
 	auto CharacterSetting = GetDefault<UABCharacterSetting>();
 	auto AssetRef = CharacterSetting->CharacterAssets[CurrentIndex];

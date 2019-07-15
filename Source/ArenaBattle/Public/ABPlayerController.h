@@ -2,6 +2,7 @@
 
 #include "ArenaBattle.h"
 #include "GameFramework/PlayerController.h"
+#include"MyNetWorkManager.h"
 #include "ABPlayerController.generated.h"
 
 /**
@@ -54,6 +55,9 @@ private:
 
 public:
 	void ChangeInputMode(bool bGameMode = true);
+
+	UPROPERTY()
+		int test = 0;
 	
 	
 	void ShowResultUI();
@@ -72,4 +76,11 @@ private:
 
 	UPROPERTY()
 		class UABGamePlayResultWidget* ResultWidget;
+
+
+
+private:
+	MyNetWorkManager* MyNetWork;
+public:
+	MyNetWorkManager* GetMyNetWorkManager();
 };

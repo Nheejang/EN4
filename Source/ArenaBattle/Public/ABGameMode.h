@@ -4,8 +4,8 @@
 
 #include "ArenaBattle.h"
 #include "GameFramework/GameModeBase.h"
+#include"MyNetWorkManager.h"
 #include "ABGameMode.generated.h"
-
 /**
  * 
  */
@@ -32,4 +32,9 @@ private:
 
 	UPROPERTY()
 		int32 ScoreToClear;
+
+	MyNetWorkManager* mySocket;
+
+
+	
 };

@@ -7,6 +7,8 @@
 #include"ABGamePlayWidget.h"
 #include"ABGamePlayResultWidget.h"
 #include"ABGameState.h"
+#include"Protocal.h"
+
 AABPlayerController::AABPlayerController()
 {
 	static ConstructorHelpers::FClassFinder<UABHUDWidget> UI_HUD_C(TEXT("/Game/Book/UI/UI_HUD.UI_HUD.UI_HUD_C"));
@@ -27,6 +29,18 @@ AABPlayerController::AABPlayerController()
 	{
 		ResultWidgetClass = UI_RESULT_C.Class;
 	}
+	//ABLOG(Warning, TEXT("testsetsetsetsefsadafetaefsdafrdfadfaer"));
+	//AUTestServer t;
+	//t.initialize();
+//	ABLOG(Warning, TEXT("testsetsetsetsefsadafetaefsdafrdfadfaer"));
+
+
+	//MyNetWork = MyNetWorkManager::GetSingleton();
+	//MyNetWork->InitSocket();
+	//MyNetWork->Connect();
+
+
+
 }
 
 void AABPlayerController::PostInitializeComponents()
@@ -76,6 +90,20 @@ void AABPlayerController::BeginPlay()
 	ABCHECK(nullptr != ABPlayerState);
 	HUDWidget->BindPlayerState(ABPlayerState);
 	ABPlayerState->OnPlayerStateChanged.Broadcast();
+
+	MyNetWork = MyNetWorkManager::GetSingleton();
+	MyNetWork->SetPlayerController(this);
+	MyNetWork->InitSocket();
+	MyNetWork->Connect();
+
+
+	MyNetWork->StartListen();
+	MyNetWork->SendTest();
+
+	ABLOG(Warning, TEXT("Test test %d"), test);
+
+
+
 }
 
 UABHUDWidget * AABPlayerController::GetHUDWidget() const
@@ -132,4 +160,9 @@ void AABPlayerController::ShowResultUI()
 
 	ResultWidget->AddToViewport();
 	ChangeInputMode(false);
+}
+
+MyNetWorkManager* AABPlayerController::GetMyNetWorkManager()
+{
+	return MyNetWork;
 }

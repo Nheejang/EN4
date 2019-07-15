@@ -8,7 +8,6 @@
 			"Name": "ArenaBattleSetting",
 			"Type": "Runtime",
 			"LoadingPhase": "PreDefault"
-		
 		},
 		{
 			"Name": "ArenaBattle",
@@ -18,7 +17,10 @@
 				"Engine",
 				"UMG",
 				"AIModule",
-				"ArenaBattleSetting"
+				"ArenaBattleSetting",
+				"EngineSettings",
+				"Sockets",
+				"CoreUObject"
 			]
 		}
 	]

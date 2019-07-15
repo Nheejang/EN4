@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ARENABATTLE_ABPlayerController_generated_h
 
-#define ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_RPC_WRAPPERS
-#define ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_RPC_WRAPPERS_NO_PURE_DECLS
-#define ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_INCLASS_NO_PURE_DECLS \
+#define UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_RPC_WRAPPERS
+#define UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAABPlayerController(); \
 	friend ARENABATTLE_API class UClass* Z_Construct_UClass_AABPlayerController(); \
@@ -25,7 +25,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_INCLASS \
+#define UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_INCLASS \
 private: \
 	static void StaticRegisterNativesAABPlayerController(); \
 	friend ARENABATTLE_API class UClass* Z_Construct_UClass_AABPlayerController(); \
@@ -35,7 +35,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_STANDARD_CONSTRUCTORS \
+#define UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AABPlayerController(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AABPlayerController) \
@@ -48,7 +48,7 @@ private: \
 public:
 
 
-#define ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_ENHANCED_CONSTRUCTORS \
+#define UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AABPlayerController(AABPlayerController&&); \
@@ -59,7 +59,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AABPlayerController); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AABPlayerController)
 
 
-#define ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_PRIVATE_PROPERTY_OFFSET \
+#define UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__HUDWidgetClass() { return STRUCT_OFFSET(AABPlayerController, HUDWidgetClass); } \
 	FORCEINLINE static uint32 __PPO__HUDWidget() { return STRUCT_OFFSET(AABPlayerController, HUDWidget); } \
 	FORCEINLINE static uint32 __PPO__ABPlayerState() { return STRUCT_OFFSET(AABPlayerController, ABPlayerState); } \
@@ -69,31 +69,31 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AABPlayerController); \
 	FORCEINLINE static uint32 __PPO__ResultWidget() { return STRUCT_OFFSET(AABPlayerController, ResultWidget); }
 
 
-#define ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_10_PROLOG
-#define ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_GENERATED_BODY_LEGACY \
+#define UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_11_PROLOG
+#define UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_PRIVATE_PROPERTY_OFFSET \
-	ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_RPC_WRAPPERS \
-	ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_INCLASS \
-	ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_STANDARD_CONSTRUCTORS \
+	UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_PRIVATE_PROPERTY_OFFSET \
+	UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_RPC_WRAPPERS \
+	UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_INCLASS \
+	UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_GENERATED_BODY \
+#define UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_PRIVATE_PROPERTY_OFFSET \
-	ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_INCLASS_NO_PURE_DECLS \
-	ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h_13_ENHANCED_CONSTRUCTORS \
+	UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_PRIVATE_PROPERTY_OFFSET \
+	UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_INCLASS_NO_PURE_DECLS \
+	UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID ArenaBattle_Source_ArenaBattle_Public_ABPlayerController_h
+#define CURRENT_FILE_ID UE4CPP_Source_ArenaBattle_Public_ABPlayerController_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

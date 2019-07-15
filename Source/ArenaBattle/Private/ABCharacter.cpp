@@ -14,6 +14,7 @@
 #include"ABPlayerState.h"
 #include"ABHUDWidget.h"
 #include"ABGameMode.h"
+#include"MyNetWorkManager.h"
 // Sets default values
 AABCharacter::AABCharacter()
 {
@@ -22,7 +23,6 @@ AABCharacter::AABCharacter()
 
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SPRINGARM"));
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("CAMERA"));
-
 	CharacterStat = CreateDefaultSubobject<UABCharacterStatComponent>(TEXT("CHARACTERSTAT"));
 
 	HPBarWidget = CreateDefaultSubobject<UWidgetComponent>(TEXT("HPBARWIDGET"));
@@ -49,6 +49,7 @@ AABCharacter::AABCharacter()
 		GetMesh()->SetAnimInstanceClass(WARRIOR_ANIM.Class);
 	}
 
+	
 	//무기 생성을 Weapon Actor로 생성하고 BeginPlay에서 실행하기위한 주석처리
 	//FName WeaponSocket(TEXT("hand_rSocket"));
 	//if (GetMesh()->DoesSocketExist(WeaponSocket))
@@ -478,7 +479,13 @@ void AABCharacter::UpDown(float NewAxisValue)
 		AddMovementInput(FRotationMatrix(GetControlRotation()).GetUnitAxis(EAxis::X), NewAxisValue);
 		break;
 	case EControlMode::DIABLO:
-		DirectionToMove.X = NewAxisValue;
+	{
+		DirectionToMove.X = NewAxisValue; 
+		
+	//	ABLOG(Warning,TEXT("Test test %d"),ABPlayerController->test)
+		//WSASend(*ABPlayerController->GetMyNetWorkManager()->GetServerSocket(),);
+		//WSASend();
+	}
 		break;
 	}
 

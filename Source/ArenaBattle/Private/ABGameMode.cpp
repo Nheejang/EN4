@@ -7,6 +7,8 @@
 #include"ABPLayerState.h"
 #include"ABGameState.h"
 
+
+//#include"UMyNetWorkManager.h"
 AABGameMode::AABGameMode()
 {
 	//DefaultPawnClass = AABPawn::StaticClass();
@@ -16,7 +18,45 @@ AABGameMode::AABGameMode()
 	GameStateClass = AABGameState::StaticClass();
 
 	ScoreToClear = 2;
+
 	
+//	mySocket->Run();
+
+
+	//UUMyNetWorkManager::GetInst()->Initialize();
+
+	//cs_packet_login* my_packet = reinterpret_cast<cs_packet_login*>(UUMyNetWorkManager::GetInst()->getSendBuffer());
+	//char temp[30] = "a";
+	//my_packet->size = sizeof(cs_packet_login);
+	//my_packet->type = PacketType::CS_Login;
+	//strcpy(my_packet->strId, "1stPlayer");
+	//strcpy(my_packet->strPassward, "1323232");
+	//UUMyNetWorkManager::GetInst()->GetWSASendBuf().len = sizeof(cs_packet_login);
+	//DWORD iobyte;
+	//WSASend(UUMyNetWorkManager::GetInst()->getSocket(), &(UUMyNetWorkManager::GetInst()->GetWSASendBuf()), 1, &iobyte, 0, NULL, NULL);
+
+
+	//UUMyNetWorkManager::GetInst()->GetWSASendBuf().buf = UUMyNetWorkManager::GetInst()->getSendBuffer();
+	//UUMyNetWorkManager::GetInst()->GetWSASendBuf().len = 512;
+	//UUMyNetWorkManager::GetInst()->GetWSARecvBuf().buf = (CHAR*)UUMyNetWorkManager::GetInst()->getRecvBuffer();
+	//UUMyNetWorkManager::GetInst()->GetWSARecvBuf().len = 512;
+	//iobyte = 0; DWORD ioflag = 0;
+
+	//int ret = WSARecv(UUMyNetWorkManager::GetInst()->getSocket(), &UUMyNetWorkManager::GetInst()->GetWSARecvBuf(), 1, &iobyte, &ioflag, NULL, NULL);
+	//
+	//if (ret)
+	//{
+	//	int err_code = WSAGetLastError();
+	//	// 에러처리.
+	//}
+	//BYTE* t = UUMyNetWorkManager::GetInst()->getRecvBuffer();
+
+	//int ID = UUMyNetWorkManager::GetInst()->ID;
+	//int WorldID = UUMyNetWorkManager::GetInst()->WorldID;
+	//int ObjID = UUMyNetWorkManager::GetInst()->ObjID;
+
+//	ABLOG(Warning, TEXT("ID : %d WORLD : %d OBJ : %d"), ID, WorldID, ObjID);
+
 }
 
 void AABGameMode::PostInitializeComponents()

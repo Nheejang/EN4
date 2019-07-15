@@ -75,6 +75,12 @@ void EmptyLinkFunctionForGeneratedCodeABPlayerController() {}
 #endif
 			static const UE4CodeGen_Private::FClassPropertyParams NewProp_MenuWidgetClass = { UE4CodeGen_Private::EPropertyClass::Class, "MenuWidgetClass", RF_Public|RF_Transient|RF_MarkAsNative, 0x0024080000010005, 1, nullptr, STRUCT_OFFSET(AABPlayerController, MenuWidgetClass), Z_Construct_UClass_UABGamePlayWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(NewProp_MenuWidgetClass_MetaData, ARRAY_COUNT(NewProp_MenuWidgetClass_MetaData)) };
 #if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_test_MetaData[] = {
+				{ "ModuleRelativePath", "Public/ABPlayerController.h" },
+			};
+#endif
+			static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_test = { UE4CodeGen_Private::EPropertyClass::Int, "test", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000000, 1, nullptr, STRUCT_OFFSET(AABPlayerController, test), METADATA_PARAMS(NewProp_test_MetaData, ARRAY_COUNT(NewProp_test_MetaData)) };
+#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ABPlayerState_MetaData[] = {
 				{ "ModuleRelativePath", "Public/ABPlayerController.h" },
 			};
@@ -100,6 +106,7 @@ void EmptyLinkFunctionForGeneratedCodeABPlayerController() {}
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_MenuWidget,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ResultWidgetClass,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_MenuWidgetClass,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_test,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ABPlayerState,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_HUDWidget,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_HUDWidgetClass,
@@ -122,7 +129,7 @@ void EmptyLinkFunctionForGeneratedCodeABPlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AABPlayerController, 2510236815);
+	IMPLEMENT_CLASS(AABPlayerController, 364902115);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AABPlayerController(Z_Construct_UClass_AABPlayerController, &AABPlayerController::StaticClass, TEXT("/Script/ArenaBattle"), TEXT("AABPlayerController"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AABPlayerController);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
